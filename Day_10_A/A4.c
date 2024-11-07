@@ -7,27 +7,8 @@ Name : Tirupati Pavani
 
 #include <stdio.h>
 
-void reverse(int arr[], int start, int end) 
-{
-    while (start<end) 
-    {
-        int temp = arr[start];
-        arr[start] = arr[end];
-        arr[end] = temp;
-        start++;
-        end--;
-    }
-}
-
-void rotateArrayEveryKthElement(int arr[], int size, int k) 
-{
-    for (int i=0;i<size;i+=k) 
-    {
-        int end = (i+k-1 < size) ? (i+k-1) : (size-1);
-        reverse(arr, i, end);
-    }
-}
-
+void reverse(int arr[], int start, int end);
+void rotateArrayEveryKthElement(int arr[], int size, int k);
 int main() {
     int size, k;
     printf("Enter the number of elements in the array: ");
@@ -50,4 +31,24 @@ int main() {
     printf("\n");
 
     return 0;
+}
+void reverse(int arr[], int start, int end) 
+{
+    while (start<end) 
+    {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+}
+
+void rotateArrayEveryKthElement(int arr[], int size, int k) 
+{
+    for (int i=0;i<size;i+=k) 
+    {
+        int end = (i+k-1 < size) ? (i+k-1) : (size-1);
+        reverse(arr, i, end);
+    }
 }

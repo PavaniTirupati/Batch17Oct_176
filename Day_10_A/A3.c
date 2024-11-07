@@ -26,16 +26,17 @@ void findNthNumber(int N)
     int primeDigits[] = {2, 3, 5, 7};
     int result[10]; 
     int index = 0;
-    while (N > 0) 
+    while (N>0) 
     {
         int remainder = (N - 1) % 4;  
         result[index++] = primeDigits[remainder]; 
-        N = (N - 1) / 4;  
+        N = (N-1)/4;  
     }
 
     printf("The %d-th number made of prime digits is: ", N);
-    for (int i = index - 1; i >= 0; i--) {
+    for (int i=index-1;i>=0;i--) {
         printf("%d", result[i]);  
     }
     printf("\n");
 }
+

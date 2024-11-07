@@ -1,10 +1,24 @@
-/* DESCRIPTION : To print the triangle pattern
+/* 
+File : A1.c
+DESCRIPTION : To print the triangle pattern
 Date : 7-11-2024
 Name : Tirupati Pavani
-File : A1.c
 */
 
 #include <stdio.h>
+
+void alphabetTriangle(int n);
+int main()
+{
+    int n;
+    printf("Enter the number of rows for the triangles: ");
+    scanf("%d", &n);
+    alphabetTriangle(n);
+    printf("\n");
+    printf("Number Triangle:\n");
+    
+    return 0;
+}
 
 void alphabetTriangle(int n)
 {
@@ -21,16 +35,4 @@ void alphabetTriangle(int n)
         }
         printf("\n");
     }
-}
-
-int main()
-{
-    int n;
-    printf("Enter the number of rows for the triangles: ");
-    scanf("%d", &n);
-    alphabetTriangle(n);
-    printf("\n");
-    printf("Number Triangle:\n");
-    
-    return 0;
 }

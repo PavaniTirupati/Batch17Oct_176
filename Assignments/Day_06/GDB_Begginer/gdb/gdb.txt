@@ -1,0 +1,51 @@
+17	
+18	#include<stdio.h>
+19	static void display(int i, int *ptr);
+20	
+21	int main(void) 
+22	{
+23	
+24	      int x = 300;
+25	      int *xptr = &x;
+26	
+Num     Type           Disp Enb Address            What
+1       breakpoint     keep y   0x0000555555554702 in main at gdb_sample_pointer_1_0.c:22
+	breakpoint already hit 1 time
+5       breakpoint     keep y   0x0000555555554702 in main at gdb_sample_pointer_1_0.c:22
+	stop only if x == 6
+6       breakpoint     keep y   0x0000555555554702 in main at gdb_sample_pointer_1_0.c:22
+7       breakpoint     keep y   0x00005555555547b0 in display at gdb_sample_pointer_1_0.c:39
+Note: breakpoint 7 also set at pc 0x5555555547b0.
+Breakpoint 8 at 0x5555555547b0: file gdb_sample_pointer_1_0.c, line 39.
+Please answer y or n.
+Starting program: /home2/user61/Batch17Oct_176/Assignments/Day_06/GDB_Begginer/gdb/sample 
+
+Breakpoint 1, main () at gdb_sample_pointer_1_0.c:22
+22	{
+#0  main () at gdb_sample_pointer_1_0.c:22
+Program not restarted.
+#0  main () at gdb_sample_pointer_1_0.c:22
+$1 = 21845
+#0  0x0000000000000000 in ?? ()
+No symbol "x" in current context.
+No symbol "x" in current context.
+Quit
+Undefined command: "Breakpoint".  Try "help".
+No symbol "x" in current context.
+Starting program: /home2/user61/Batch17Oct_176/Assignments/Day_06/GDB_Begginer/gdb/sample 
+
+Breakpoint 1, main () at gdb_sample_pointer_1_0.c:22
+22	{
+$2 = 21845
+#0  0x0000000000000000 in ?? ()
+#0  main () at gdb_sample_pointer_1_0.c:22
+Note: breakpoints 1, 5 and 6 also set at pc 0x555555554702.
+Breakpoint 9 at 0x555555554702: file gdb_sample_pointer_1_0.c, line 22.
+Please answer y or n.
+Starting program: /home2/user61/Batch17Oct_176/Assignments/Day_06/GDB_Begginer/gdb/sample 
+
+Breakpoint 1, main () at gdb_sample_pointer_1_0.c:22
+22	{
+#0  main () at gdb_sample_pointer_1_0.c:22
+24	      int x = 300;
+$3 = 21845
